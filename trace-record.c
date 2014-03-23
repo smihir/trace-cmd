@@ -37,6 +37,7 @@
 #endif
 #include <netdb.h>
 #include <pthread.h>
+#define __USE_GNU 1
 #include <fcntl.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -1379,7 +1380,7 @@ static int expand_event_files(struct buffer_instance *instance,
 	free(p);
 
 	if (ret < 0)
-		die("No filters found");
+		die("No filters found %d",ret);
 
 	for (i = 0; i < globbuf.gl_pathc; i++) {
 		int len;

@@ -1176,6 +1176,7 @@ void trace_report (int argc, char **argv)
 
 		c = getopt_long (argc-1, argv+1, "+hi:fepRr:tPNn:LlEwF:VvTqO:",
 			long_options, &option_index);
+        printf("mir: %c %u %d\n",(char)c,(unsigned int)c, c);
 		if (c == -1)
 			break;
 		switch (c) {

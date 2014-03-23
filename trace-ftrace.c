@@ -24,6 +24,10 @@
 
 #include "trace-cmd.h"
 
+#ifndef MIN
+#define MIN(a,b) (((a)<(b))?(a):(b))
+#endif
+
 struct plugin_option trace_ftrace_options[] = {
 	{
 		.name = "tailprint",

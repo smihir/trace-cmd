@@ -208,6 +208,7 @@ int main (int argc, char **argv)
 		usage(argv);
 
 	if (strcmp(argv[1], "report") == 0) {
+            printf("test report \n");
 		trace_report(argc, argv);
 		exit(0);
 	} else if (strcmp(argv[1], "snapshot") == 0) {

@@ -68,6 +68,7 @@ static void put_temp_file(char *file)
 }
 
 #define MAX_PATH 1024
+typedef void (*sighandler_t)(int);
 
 static void signal_setup(int sig, sighandler_t handle)
 {
